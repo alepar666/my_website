@@ -2,7 +2,7 @@ const PLAYLIST_URL = "https://www.theconventicle.club/lobby/audio/playlist/";
 
 function startLobby() {
     initLobby();
-    loadPlaylist();
+    //loadPlaylist();
 };
 
 function initLobby() {
