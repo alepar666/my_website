@@ -31,9 +31,9 @@ function getPublicInfoById(profileId) {
     $("#userData").hide();
     $("#fetching").show();
     $("#getPublicInfoById").hide();
-    var queryString = "{\n  getPublicUserInfo(userId: \"" + profileId + "\") {\n username, firstName, picture, customPhoto, userNetworth {\n  networth, totalTiles, spent\n  }\n },\n }";
+    var queryString = "{\n  getPublicUserInfo(userId: \" " + profileId + "\") {\n username, firstName, picture, customPhoto, userNetworth {\n  networth, totalTiles, spent\n  }\n },\n }";
     var query = {
-        "query": queryString
+        "query": "{\n  getPublicUserInfo(userId: \"7eeb731c-762d-4fa2-8b3d-75d181d08936\") {\n username, firstName, picture, customPhoto, userNetworth {\n  networth, totalTiles, spent\n  }\n },\n }"
     };
 
     $.ajax({
@@ -46,12 +46,26 @@ function getPublicInfoById(profileId) {
             'Referer': 'https://app.earth2.io/',
             'Origin': 'https://app.earth2.io',
             'Connection': 'keep-alive',
-            'Origin': 'https://app.earth2.io'
+            /*'Cookie': 'sessionid=617lc3gxyvz8l5j53ge62p2iv2noswx9; __stripe_mid=096d9a1e-e085-44de-ada5-ce276e8138ab540ad1; csrftoken=I9yHeLatPizmnZcbOlhmFRiDLEETM9Q2IynVS4xjp8kN4X0NgVVreYzsWjyoJQt9',*/
+            'Origin': 'https://app.earth2.io',
+            'X-CSRFToken': 'I9yHeLatPizmnZcbOlhmFRiDLEETM9Q2IynVS4xjp8kN4X0NgVVreYzsWjyoJQt9',
+            'TE': 'Trailers'
         },
         method: 'POST',
         data: JSON.stringify(query),
         success: function (response) {
-            var data = response.data.getPublicUserInfo;
+
+            var data = response.data;
+            if (data.getPublicUserInfo == null) {
+                $("#fetching").hide();
+                $("#rawData").show();
+                $("#rawData").html(JSON.stringify(response));
+                return;
+            } else {
+                data = data.getPublicUserInfo;
+            }
+
+
             console.log(data);
             $("#username").html(JSON.stringify(data.username));
             $("#userEmail").html(JSON.stringify(data.firstName));
@@ -62,7 +76,7 @@ function getPublicInfoById(profileId) {
             $("#fetching").hide();
             $("#userData").show();
             $("#getPublicInfoById").show();
-            //$("#rawData").html(JSON.stringify(data));
+
         },
         error: function (data) {
             console.log('error ' + data);
