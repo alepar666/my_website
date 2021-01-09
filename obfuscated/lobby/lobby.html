@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Conventicle Lobby</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/lobby.js"></script>
+    <script src="js/id3-minimized.js"></script>
+    <link rel='icon' href='/pics/favicon.gif' type='image/gif' />
+</head>
+
+<body onload="startLobby()">
+    <div class="wrapper">
+        <header><img src="../pics/banner.jpg" style="max-height:90%;" alt="banner"></header>
+        <main>
+            <div class="menu">
+                <ul id='menu-list'>
+                    <li class="menuItem" data-id="research">Research</li>
+                    <li class="menuItem" data-id="videos">Videos</li>
+                    <li class="menuItem" data-id="music">Music</li>
+                    <li class="menuItem"><a href="chat.html" target="_blank">Chat</a></li>
+                </ul>
+            </div>
+            <div class="menuShow">
+                <div id="research" class="menuDiv">
+                    <h1>Research</h1>
+                    <p>Ongoing researches</p>
+                    <table>
+                        <tr>
+                            <th>Member</th>
+                            <th>Topic</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>Hesperius Draco</td>
+                            <td>Chords impact on emotions</td>
+                            <td>Collecting informations</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="videos" class="menuDiv">
+                    <h1>Videos</h1>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/cyW5z-M2yzw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id="music" class="menuDiv">
+                    <h1>Music</h1>
+                    <p>Collection of mixes from the Conventicle</p>
+                    <p><iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2Fdiscoclan%2Fdiscoteca-clandestina-kunsthal-gent-part-1-alessandro-parisi-warm-up-djset%2F" frameborder="0"></iframe></p>
+                    <p><iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2Falepar%2Fhesperius-draco-live-oberwave-st-petersburg%2F" frameborder="0"></iframe></p>
+                    <p><iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2Falepar%2Ftangerine-dream-tribute-radio-panik-brussels%2F" frameborder="0"></iframe></p>
+                    <p><iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2Falepar%2Ftestamento-mix%2F" frameborder="0"></iframe></p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <table class="radioTable">
+                <colgroup>
+                    <col span="1" style="width: 25%;">
+                    <col span="1" style="width: 10%;">
+                    <col span="1" style="width: 65%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td style="vertical-align: middle">The Conventicle Lobby's radio</td>
+                        <td style="vertical-align: middle"><audio id="radioPlayer" controls autoplay></audio></td>
+                        <td style="vertical-align: middle"><span id="tags"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </footer>
+    </div>
+</body>
+
+</html>

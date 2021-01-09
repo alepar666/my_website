@@ -1,0 +1,276 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Courier New;
+    font-size: 1em;
+}
+
+header {
+    background-color: #000000;
+    height: 100px;
+}
+
+footer {
+    border-top: 5px solid #ffffff;
+    height: 10%;
+    background-color: #000000;
+}
+
+body {
+    margin: 0%;
+}
+
+main {
+    margin-top: 5%;
+    flex: 1;
+    background-color: #000000;
+}
+
+h1 {
+    font-size: 1em;
+}
+
+
+a:link {
+    color: grey;
+}
+
+a:visited {
+    color: grey;
+}
+
+.menu {
+    width: 20%;
+    float: left;
+}
+
+footer {
+    width: 100%;
+}
+
+#radioText {
+    width: 80%;
+    float: right;
+}
+
+#radioPlayerDiv {
+    width: 20%;
+    float: left;
+}
+
+.radioTable {
+    width: 100%;
+}
+
+.menuItem {
+    cursor: pointer;
+}
+
+.menuDiv {
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: none;
+}
+
+.menuShow {
+    width: 75%;
+    height: 80%;
+    float: left;
+    padding: 1%;
+    overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.audioTd {
+    border: 0px solid #000000;
+    text-align: left;
+    padding: 8px;
+    height: 20px;
+}
+
+td,
+th {
+    border: 0px solid #000000;
+    text-align: left;
+    padding: 8px;
+    height: 30px;
+}
+
+tr:nth-child(even) {
+    background-color: #000000;
+}
+
+.button {
+    display: none;
+    font-size: 0.4em;
+}
+
+#levelDisplayer {
+    display: none;
+    padding-left: 10%;
+    height: 100%;
+    width: 90%;
+}
+
+#submitLevelDiv {
+    width: 100%;
+    align-items: center;
+}
+
+#pixel {
+    height: 4px;
+    width: 4px;
+    background-color: #111111;
+}
+
+#cvnname {
+    margin: 1%;
+}
+
+#vip {
+    display: none;
+    float: right;
+}
+
+#artworkModalDiv {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.column img {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {
+    opacity: 0.7;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+
+    .menu {
+        width: 100%;
+        float: left;
+    }
+
+    .menuShow {
+        width: 90%;
+        float: left;
+        padding: 10px;
+    }
+
+    .wrapper {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: Courier New;
+        font-size: 0.6em;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    #levelDisplayer {
+        display: none;
+        height: 90%;
+        width: 90%;
+    }
+}

@@ -1,0 +1,10 @@
+TODO:
+
+- Style lobby radio 
+
+
+BUSINESS
+- add noise in sessionStorage to confuse attackers
+- add honeypots in code in case somebody de-obfuscate it
+
+

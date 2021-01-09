@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Conventicle Homepage</title>
+    <script src="js/pageScript.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function() {
+            init();
+        });
+    </script>
+    <link rel='icon' href='/pics/favicon.gif' type='image/gif' />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header><img src="pics/banner.jpg" style="max-height:90%;" alt="banner"></header>
+        <main>
+            <div class="menu">
+                <ul id='menu-list'>
+                    <li class="menuItem" data-id="manifesto">Manifesto</li>
+                    <li class="menuItem" data-id="team">The Team</li>
+                    <li class="menuItem" data-id="artworks">Artworks</li>
+                    <li class="menuItem" data-id="test">Join</li>
+                </ul>
+            </div>
+            <div class="menuShow">
+                <div id="manifesto" class="menuDiv">
+                    <h1>The Geek Magicians</h1>
+                    <p>(from <a href="http://www.paolodanese.it/discoclan/" target="_blank">"Discoteca Clandestina")</a></p>
+                    <p>The Conventicle was the second outcast group, and also the most secretive one. Unlike the Resistance, not much is known about the Conventicle, their numbers and organization. They were also composed of multiple groups, but they avoided contact with Babylon at any cost. They already overcame their anger toward the system, and they were more interested in pursuing their mysterious esoteric goals. They were described as Geek Magicians, being an interesting mix of renegade tech and I.T. geniuses, magic weirdos and esotericists. They were the only group, among Babylon and the Resistance, pursuing spiritual knowledge. Thanks to their ability with technology and alternative energy sources, they have been able to build some rudimentary systems, totally indipendent from the centralized grid, that were able to provide them with electric power, but they were quite secretive about that. They believed that electric power was given to them as a mean for higher purposes. After the war destruction, they have been able to save some music equipment, especially vintage models of synthesizers and various analog machines. They believed that in a difficult environment, it would have been easier to restart with this kind of stuff. Their music was called “Esoteric Disco”, a blending of dark and mystical atmospheres, and essential Disco elements from the 80’s decade of the 20th century. </p>
+                    <p>The direction of their effort was mostly inward, focused on discovering the emotional mysteries of the psyche, through musical rituals that aimed to establish a contact with the higher, invisible levels of existence. Esoteric Disco was essentially the step before Ascension Disco. If we see Babylon as a late degeneration of Electronic Dance Music, Esoteric Disco represent the return to its more mysterious and dark roots. The Conventicle adepts, being aware of their inner world, were able to get in contact with Discoteca Clandestina. Chosen Conventicle djs were invited to play Esoteric Disco in there as warm up to the Ascension Disco Djs. Despite its secrecy, in fact the Conventicle group was very dynamic, acting as a bridge between the others. While many Conventicle adepts after some time became Ascension Dancers and disappeared in Discoteca Clandestina, many Survival Rockers were also leaving their communities in search for new spiritual and musical awareness in the Conventicle groups.</p>
+                </div>
+                <div id="team" class="menuDiv">
+                    <h1>The Team</h1>
+                    <p>Current members of The Conventicle</p>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Role</th>
+                            <th>Date of entry</th>
+                        </tr>
+                        <tr>
+                            <td>Hesperius Draco</td>
+                            <td>Master of Ceremonies</td>
+                            <td>∞</td>
+                        </tr>
+                        <tr>
+                            <td>5D Ultraverse Messiah</td>
+                            <td>Silent Keeper</td>
+                            <td>∞</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="artworks" class="menuDiv">
+                    <h1>Artworks</h1>
+                    <p>Collection of pictures about the Conventicle imaginary.</p>
+                    <div class="row">
+                        <div class="column">
+                            <img id="A01" src="pics/artworks/A01.jpg" alt="A01" style="width:60%" onclick="showPic(this);">
+                        </div>
+                        <div class="column">
+                            <img id="A02" src="pics/artworks/A02.jpg" alt="A02" style="width:60%" onclick="showPic(this);">
+                        </div>
+                        <div class="column">
+                            <img id="A03" src="pics/artworks/A03.jpg" alt="A03" style="width:60%" onclick="showPic(this);">
+                        </div>
+                        <div class="column">
+                            <img id="B01" src="pics/artworks/B01.jpg" alt="B01" style="width:60%" onclick="showPic(this);">
+                        </div>
+                        <div class="column">
+                            <img id="B02" src="pics/artworks/B02.jpg" alt="B02" style="width:60%" onclick="showPic(this);">
+                        </div>
+                        <div class="column">
+                            <img id="B03" src="pics/artworks/B03.jpg" alt="B03" style="width:60%" onclick="showPic(this);">
+                        </div>
+                        <div class="column">
+                            <img id="C01" src="pics/artworks/C01.jpg" alt="C01" style="width:60%" onclick="showPic(this);">
+                        </div>
+                        <div class="column">
+                            <img id="C02" src="pics/artworks/C02.jpg" alt="C02" style="width:60%" onclick="showPic(this);">
+                        </div>
+                        <div class="column">
+                            <img id="C03" src="pics/artworks/C03.jpg" alt="C03" style="width:60%" onclick="showPic(this);">
+                        </div>
+                        <div id="myModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="imgToShow" alt="mamt" src="#">
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="test" class="menuDiv">
+                    <h1>Join</h1>
+                    <p>In order to join The Conventicle, you need to pass a test first.</p>
+                    <p>You can pass the levels by improving yourself or cracking the code, it's your choice, but both paths will lead you to the same point: the last step, in which cheating is impossible.</p>
+                    <p><span id="testLink" style="cursor:pointer">Start the test</span></p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

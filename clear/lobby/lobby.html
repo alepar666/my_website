@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Conventicle Lobby</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/lobby.js"></script>
+    <script src="js/id3-minimized.js"></script>
+    <link rel='icon' href='/pics/favicon.gif' type='image/gif' />
+</head>
+
+<body onload="startLobby()">
+    <div class="wrapper">
+        <header><img src="../pics/banner.jpg" style="max-height:90%;" alt="banner"></header>
+        <main>
+            <div class="menu">
+                <ul id='menu-list'>
+                    <li class="menuItem" data-id="research">Research</li>
+                    <li class="menuItem" data-id="library">Library</li>
+                    <li class="menuItem" data-id="logs">Logs</li>
+                </ul>
+            </div>
+            <div class="menuShow">
+                <div id="research" class="menuDiv">
+                    <h1>Research</h1>
+                    <p>Ongoing researches</p>
+                    <table>
+                        <tr>
+                            <th>Member</th>
+                            <th>Topic</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>Hesperius Draco</td>
+                            <td>Chords impact on emotions</td>
+                            <td>Collecting informations</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="library" class="menuDiv">
+                    <h1>Library</h1>
+                    <p>Collection of resources</p>
+                    <p><a href="pics/piano_chords.jpg" target="_blank">Piano chords</a></p>
+                    <p><a href="pics/major_scales.png" target="_blank">Major scales</a></p>
+                    <p><a href="pics/minor_scales.jpg" target="_blank">Minor scales</a></p>
+                    <p><a href="https://pages.mtu.edu/~suits/notefreq432.html" target="_blank">Frequencies for equal-tempered scale</a></p>
+                    <p><a href="https://www.youtube.com/watch?v=cyW5z-M2yzw" target="_blank">Music And Measure Theory</a></p>
+                    <p><a href="docs/262906.pdf" target="_blank">Christian Friedrich Daniel Schubart's Ideen zu einer Ästhetik der Tonkunst</a></p>
+                </div>
+                <div id="logs" class="menuDiv">
+                    <h1>Logs</h1>
+                    <p>05/05/2020 - Lobby is officialy open.</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <table class="radioTable">
+                <colgroup>
+                    <col span="1" style="width: 25%;">
+                    <col span="1" style="width: 10%;">
+                    <col span="1" style="width: 60%;">
+                    <col span="1" style="width: 5%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td style="vertical-align: middle">The Conventicle Lobby's radio</td>
+                        <td style="vertical-align: middle"><audio id="radioPlayer" controls autoplay></audio></td>
+                        <td style="vertical-align: middle"><span id="tags"></span></td>
+                        <td style="vertical-align: middle"><button><a href="chat.html" target="_blank">
+                                    <h2>Chat</h2>
+                                </a></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </footer>
+    </div>
+</body>
+
+</html>
