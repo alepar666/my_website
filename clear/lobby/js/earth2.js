@@ -31,9 +31,9 @@ function getPublicInfoById(profileId) {
     $("#userData").hide();
     $("#fetching").show();
     $("#getPublicInfoById").hide();
-    var queryString = "{\n  getPublicUserInfo(userId: \" " + profileId + "\") {\n username, firstName, picture, customPhoto, userNetworth {\n  networth, totalTiles, spent\n  }\n },\n }";
+    var queryString = "{\n  getPublicUserInfo(userId: \"" + profileId + "\") {\n username, firstName, picture, customPhoto, userNetworth {\n  networth, totalTiles, spent\n  }\n },\n }";
     var query = {
-        "query": "{\n  getPublicUserInfo(userId: \"7eeb731c-762d-4fa2-8b3d-75d181d08936\") {\n username, firstName, picture, customPhoto, userNetworth {\n  networth, totalTiles, spent\n  }\n },\n }"
+        "query": queryString
     };
 
     $.ajax({
