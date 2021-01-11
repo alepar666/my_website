@@ -2,90 +2,89 @@ const PLAYLIST_URL = "https://www.theconventicle.club/lobby/audio/playlist/";
 
 function startLobby() {
     initLobby();
-    //loadPlaylist();
 };
 
 function initLobby() {
     $('.menuDiv').hide();
     $("#tags").hide();
+    $("#userData").hide();
+    $("#fetching").hide();
     $('#menu-list li').click(function () {
         $('.menuDiv').hide();
         var divId = $(this).data('id');
         $('#' + divId).show();
     });
-}
 
-function loadPlaylist() {
-    $.ajax({
-        url: PLAYLIST_URL,
-        success: function (data) {
-            var fileNames = new Array();
-            $(data).find("a:contains(.mp3)").each(function () {
-                // will loop through 
-                var fileName = $(this).attr("href");
-                fileNames.push(fileName);
-            });
-            // shuffle order
-            fileNames = shuffle(fileNames);
-
-            var i = 0;
-            // Get the audio element
-            var music_player = document.querySelector("#radioPlayer");
-            // function for moving to next audio file
-            function next() {
-                // Check for last audio file in the playlist
-                if (i === fileNames.length - 1) {
-                    i = 0;
-                } else {
-                    i++;
-                }
-                // Change the audio element source
-                var fileName = fileNames[i];
-                music_player.src = fileName;
-                loadMetaData(fileName);
-            }
-
-            // Start the player
-            var fileName = fileNames[i];
-
-            music_player.src = fileName;
-            loadMetaData(fileName);
-
-            // Listen for the music ended event, to play the next audio file
-            music_player.addEventListener('ended', next, false);
-            music_player.onplaying = function () {
-                $("#tags").show();
-            }
-            music_player.onpause = function () {
-                $("#tags").hide();
-            }
-
+    $("#getPublicInfoById").show();
+    $("#getPublicInfoById").click(function () {
+        var input = $("#profileIdinput").val();
+        var profileId = ("" + input).trim();
+        if (profileId !== '') {
+            getPublicInfoById(profileId);
+        } else {
+            alert("profile id is empty.")
         }
     });
+
 }
 
-function loadMetaData(fileName) {
-    ID3.loadTags(fileName, function () {
-        var tags = ID3.getAllTags(fileName);
-        var tagsTetx = tags.artist + " - " + tags.title;
-        $("#tags").html("now playing: " + tagsTetx);
+function getPublicInfoById(profileId) {
+    $("#userData").hide();
+    $("#fetching").show();
+    $("#getPublicInfoById").hide();
+    var queryString = "{\n  getPublicUserInfo(userId: \"" + profileId + "\") {\n username, firstName, picture, customPhoto, userNetworth {\n  networth, totalTiles, spent\n  }\n },\n }";
+    var query = {
+        "query": queryString
+    };
+
+    $.ajax({
+        url: 'https://app.earth2.io/graphql',
+        headers: {
+            'Accept': 'application/json',
+            'Accept-Language': 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Content-Type': 'application/json',
+            'Referer': 'https://app.earth2.io/',
+            'Origin': 'https://app.earth2.io',
+            'Connection': 'keep-alive',
+            /*'Cookie': 'sessionid=617lc3gxyvz8l5j53ge62p2iv2noswx9; __stripe_mid=096d9a1e-e085-44de-ada5-ce276e8138ab540ad1; csrftoken=I9yHeLatPizmnZcbOlhmFRiDLEETM9Q2IynVS4xjp8kN4X0NgVVreYzsWjyoJQt9',*/
+            'Origin': 'https://app.earth2.io',
+            'X-CSRFToken': 'I9yHeLatPizmnZcbOlhmFRiDLEETM9Q2IynVS4xjp8kN4X0NgVVreYzsWjyoJQt9',
+            'TE': 'Trailers'
+        },
+        method: 'POST',
+        data: JSON.stringify(query),
+        success: function (response) {
+
+            var data = response.data;
+            if (data.getPublicUserInfo == null) {
+                $("#fetching").hide();
+                $("#rawData").show();
+                $("#rawData").html(JSON.stringify(response));
+                return;
+            } else {
+                data = data.getPublicUserInfo;
+            }
+
+
+            console.log(data);
+            $("#username").html(JSON.stringify(data.username));
+            $("#userEmail").html(JSON.stringify(data.firstName));
+            $("#totalTiles").html(JSON.stringify(data.userNetworth.totalTiles));
+            $("#spent").html(JSON.stringify(data.userNetworth.spent));
+            $("#networth").html(JSON.stringify(data.userNetworth.networth));
+
+            $("#fetching").hide();
+            $("#userData").show();
+            $("#getPublicInfoById").show();
+
+        },
+        error: function (data) {
+            console.log('error ' + data);
+
+            $("#fetching").hide();
+            $("#userData").show();
+            $("#getPublicInfoById").show();
+        }
     });
-}
-
-function shuffle(array) {
-    var currentIndex = array.length,
-        temporaryValue, randomIndex;
-    while (0 !== currentIndex) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
-    return array;
-}
-
-function initChat() {
-    $(".header-chat-logo").html("");
-    //console.log("MONA : " + $(".header-chat-logo").html());
 }
