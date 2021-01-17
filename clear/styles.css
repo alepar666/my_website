@@ -24,7 +24,7 @@ body {
 }
 
 main {
-    margin-top: 5%;
+    margin-top: 1%;
     flex: 1;
     background-color: #000000;
 }
@@ -78,7 +78,7 @@ footer {
 
 .menuShow {
     width: 75%;
-    height: 80%;
+    height: 85%;
     float: left;
     padding: 1%;
     overflow: auto;
