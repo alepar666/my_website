@@ -1,0 +1,131 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Courier New;
+    font-size: 1em;
+}
+
+.avatar {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+body {
+    margin: 0%;
+    background-color: black;
+}
+
+main {
+    margin-top: 1%;
+    flex: 1;
+    background-color: #000000;
+    height: 100%;
+}
+
+h1 {
+    font-size: 1em;
+}
+
+
+a:link {
+    color: grey;
+}
+
+a:visited {
+    color: grey;
+}
+
+a:hover {
+    color: purple;
+}
+
+.menu {
+    max-width: 17%;
+    float: left;
+}
+
+.menuItem {
+    cursor: pointer;
+}
+
+.menuDiv {
+    width: 99%;
+    height: 90%;
+    float: left;
+    display: none;
+    margin-top: 2%;
+    background-color: black;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.menuShow {
+    margin: 2%;
+    width: 75%;
+    height: 99%;
+    float: left;
+    background-color: black;
+}
+
+#menu-list :hover {
+    color: purple;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .modal-content {
+        width: 100%;
+    }
+
+    .menu {
+        width: 100%;
+        float: left;
+    }
+
+    .menuShow {
+        width: 90%;
+        float: left;
+        padding: 10px;
+    }
+
+    .wrapper {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: Courier New;
+        font-size: 0.6em;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+}

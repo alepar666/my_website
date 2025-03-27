@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alessandro Parisi Website</title>
+    <script src="js/pageScript.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function() {
+            init();
+        });
+
+    </script>
+    <link rel='icon' href='/pics/favicon.gif' type='image/gif' />
+</head>
+
+<body>
+    <div class="wrapper">
+        <main>
+            <div class="menu">
+                <p><a href="index.html"><img src="pics/avatar.png" alt="avatar" class="avatar"></a></p>
+                <ul id='menu-list'>
+                    <li class="menuItem" data-id="bio">About Me</li>
+                    <li class="menuItem" data-id="discog">Discography</li>
+                    <li class="menuItem" data-id="performances">Performances</li>
+                    <li class="menuItem" data-id="soundtracks">Soundtracks</li>
+                    <li class="menuItem" data-id="press">Press</li>
+                    <li class="menuItem" data-id="gigslog">Gigs Log</li>
+                    <li class="menuItem" data-id="contacts">Contacts</li>
+                    <li class="menuItem" data-id="support">Support</li>
+                </ul>
+            </div>
+            <div class="menuShow">
+                <div id="welcome" class="menuDiv">
+                    <p>
+                        Hello Visitor,<br>
+                        I am Alessandro Parisi and I welcome you to my website.<br>
+                        Here you will find all that matters about my music project, enjoy the tour!<br>
+                    </p>
+                    <p>
+                        <img src="pics/welcome.jpg" style="max-height: 80%; max-width: 80%">
+                    </p>
+                </div>
+                <div id="bio" class="menuDiv">
+                    <h1>About me</h1>
+                    <p>
+                        I was born in 1985 in a little city in the north-east of Italy, Pordenone. I started listening electronic music in the early '90s, when MTV was actually broadcasting music. I approached the club scene during the early '00s at the TNT Kama§utra discotheque, where Marzio Dance was the resident dj and vocalist. A lot of my influences came from the music spinned in that period, between 1996 and 2003, which was a slower and darker version of progressive-techno music. In addition to the club scene, I got influenced by my mother which plays the church organ and the home-repertory was mainly baroque and religious. In addition to this, Pordenone was the most important italian city for the punk movement origin (search for "The Great Complotto" if interested) and that of course contributed aswell to my music. In conclusion: if you put together the dark electronic sounds, the mystical melodies or chorus armonies and the rough punk punch you'll get more or less the foundations of my sound.<br>
+                        I spent some years searching my music path, but it was just in 2010 that I truly kicked off my current music production with the right approach. Since then I produced many releases under different labels and aliases (see discography section) and I also performed live/dj-set in different clubs all over Europe (see performances section). My music has been also used for soundtracks in TV series, fashion shows, art exhibitions and documentaries (see soundtrack section).
+                        <br>At the moment I am pretty much focusing in digesting the old music, more than getting updated on new one. I contribute to <a href="https://www.intergalactic.fm/" target="_blank">Intergalactic FM</a> with mixes or editing old tracks. Since I never stopped searching, collecting and classifying music, this little obsession resulted in a huge database of different music styles which now I can put together in form of "1-hour-story-recording". I haven't stopped producing though, I just select more carefully when/if doing it.<br>
+                        Any further information I'd rather share over a cold beer or check the Contacts section.
+                    </p>
+                </div>
+                <div id="gigslog" class="menuDiv">
+                    <h1>Gigs Log</h1>
+                    <p>
+                        I have mainly performed live, but recently I started having fun also djing. Here is the diary of my gigs since now.
+                        <br> <br>
+                        09/05/24 - IFM Festival (Den Haag) [Dj Set] <br>
+                        04/01/24 - Café Central (Brussels) [Dj Set] <br>
+                        02/09/23 - Studio 508 (Amsterdam) [Dj Set] <br>
+                        19/05/23 - IFM Festival (Den Haag) [Dj Set] <br>
+                        22/10/22 - Killing Time (Valencia) [Dj Set] <br>
+                        27/05/22 - IFM Festival (Den Haag) [Live] <br>
+                        06/12/21 - Unlimited Nation Streaming Festival [Live]<br>
+                        30/07/20 - PRC (Den Haag) [Dj set] <br>
+                        18/01/20 - Le Louvre (Brussels) [Dj set] <br>
+                        09/11/19 - КПД (St. Petersburg) [Live] <br>
+                        08/11/19 - Бумажная Фабрика (Moscow) [Live] <br>
+                        01/11/19 - Love (Milan) [Dj set] <br>
+                        05/09/19 - Le Louvre (Brussels) [Dj set] <br>
+                        07/06/19 - IFM Festival (Den Haag) [Dj set] <br>
+                        25/05/19 - Kunsthal (Gent) [Dj set] <br>
+                        29/12/18 - Modular (Pordenone) [Live] <br>
+                        24/11/18 - Mosaique (St. Petersburg) [Dj set] <br>
+                        29/09/18 - Jack (Amsterdam) [Live] <br>
+                        11/08/18 - Blijdrop Festival (Rotterdam) [Dj set] <br>
+                        26/05/18 - Mjut (Leipzig) [Live] <br>
+                        18/05/18 - IFM Festival (Den Haag) [Live] <br>
+                        21/04/18 - Yucatan Extension (Vilnius) [Live] <br>
+                        03/03/18 - Negasonic (Aalst) [Live] <br>
+                        03/02/18 - BAR (Rotterdam) [Live] <br>
+                        15/11/17 - PRC (Den Haag) [Dj set] <br>
+                        03/10/17 - Motel Campo (Genève) [Live] <br>
+                        15/09/17 - Griessmühle (Berlin) [Live] <br>
+                        28/06/17 - Radio Panik (Bruxelles) [Live] <br>
+                        02/06/17 - Panama Racing Club (Den Haag) [Dj set] <br>
+                        14/04/17 - IFM Festival (Den Haag) [Live] <br>
+                        25/02/17 - Klub Kegelbahn (Luzern) [Live] <br>
+                        17/02/17 - Sala Siroco (Madrid) [Live] <br>
+                        26/08/16 - Moog Club (Barcelona) [Live] <br>
+                        23/04/16 - Vila Štvanice (Prague) [Live] <br>
+                        22/04/16 - Metro Chill Out (Olomouc) [Live] <br>
+                        27/11/15 - Specka (Madrid) [Live] <br>
+                        24/05/15 - Batofar (Paris) [Live] <br>
+                        25/04/15 - Goldhorn (Leipzig) [Live] <br>
+                        24/04/15 - Griessmühle (Berlin) [Live] <br>
+                        05/12/14 - IfZ (Leipzig) [Live] <br>
+                        29/11/14 - Studio 80 (Amsterdam) [Live] <br>
+                        22/11/14 - Klub Kegelbahn (Luzern) [Live] <br>
+                        20/09/14 - Ventiquattro (Brescia) [Live] <br>
+                        19/09/14 - Sacrestia F.A. (Milano) [Live] <br>
+                        22/03/14 - Ventiquattro (Brescia) [Live] <br>
+                        28/02/14 - Specka (Madrid) [Live] <br>
+                        22/02/14 - Kraftfeld (Zürich) [Live] <br>
+                        19/12/13 - Ca' dei Ricchi (Treviso) [Live] <br>
+                        16/11/13 - Batofar (Paris) [Live] <br>
+                        25/05/13 - PopCorn (Venezia) [Live] <br>
+                        20/04/13 - Loch (Zürich) [Live] <br>
+                        22/09/12 - Teatro Lo Spazio (Roma) [Live] <br>
+                        28/04/12 - SpazioConcept (Milano) [Live] <br>
+                    </p>
+                </div>
+                <div id="discog" class="menuDiv">
+                    <h1>Discography</h1>
+                    <p>
+                        Below a personal selection of my releases.
+                        <br>
+                        To consult the full discography check <a href="https://www.discogs.com/it/artist/2630154-Alessandro-Parisi-2" target="_blank">here</a>.<br>
+                        You can find anyway my music in all streaming platforms (iTunes, Spotify, YouTube, Soundcloud, etc.)
+                        <br><br>
+                        <iframe src="https://open.spotify.com/embed/playlist/5IPj8NZGnsrVLCNDSj1Zx0?theme=0" width="100%" height="500" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </p>
+                </div>
+
+                <div id="performances" class="menuDiv">
+                    <h1>Performances</h1>
+                    <p>Some video recordings available in the web I selected to represent my different type of performances</p>
+                    <p>Treviso (IT) - 2013</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WtpQ1TnJwD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <br>
+                    <p>Le Batofar, Paris (FR) - 2013</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/22g6sW7Igf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <br>
+                    <p>Specka, Madrid (ES) - 2014</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uAA1om3ZEbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <br>
+                    <p>Kraftweld, Zurich (CH) - 2014</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zKM0MfA9ArY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <br>
+                    <p>Yucatan Extension, Vilnius (LT) - 2018</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ou5jt2tZbmQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </div>
+                <div id="press" class="menuDiv">
+                    <h1>Press</h1>
+                    <p>Here a selection of articles/interviews about me</p><br>
+                    <a href="https://www.theransomnote.com/music/premieres-exclusive-streams/premiere-alessandro-parisi-babilonia/" target="_blank">The Ransom Note (EN) - 2020</a><br>
+                    <a href="https://www.soundwall.it/giant-steps-alessandro-parisi/" target="_blank">Soundwall (IT) - 2018</a><br>
+                    <a href="http://www.hartzine.com/alessandro-parisi/" target="_blank">Hartzine (FR/EN) - 2016</a><br>
+                    <a href="http://www.theitalojob.com/alessandro-parisi-italo-space-disco-journey-the-italo-job-exclusive-mixtape/" target="_blank">The Italo Job (IT) - 2016</a><br>
+                    <a href="https://www.vice.com/it/article/rqb3zw/yntht-alessandro-parisi-hesperius-draco" target="_blank">VICE (IT) - 2013</a><br>
+                    <a href="https://www.electronique.it/album-reviews/3504-hic-sunt-leones" target="_blank">Electronique.it (IT) - 2013</a><br>
+                    <a href="https://icefm.wordpress.com/2013/10/08/alessandro-parisi/" target="_blank">Ice FM (EN) - 2013</a><br> <a href="https://tospitimetaparaxena.blogspot.com/2013/11/a-talk-with-alessandro-parisi.html" target="_blank">Το Σπίτι Με Τα Παράξενα (EN/EL) - 2013</a><br>
+                    <a href="https://www.factmag.com/2013/02/19/italian-synth-whizz-alessandro-parisi-welcomes-you-to-draconia-on-new-lp/" target="_blank">Fact Mag (EN) - 2013</a><br>
+                    <a href="https://www.ondarock.it/recensioni/2013_alessandroparisi_hicsuntleones.htm" target="_blank">Onda Rock (IT) - 2013</a><br>
+                    <a href="http://www.indieforbunnies.com/2013/07/19/intervista-con-alessandro-parisi/" target="_blank">Indie for Bunnies (IT) - 2013</a><br>
+                    <a href="https://igloomag.com/reviews/alessandro-parisi-draconia-lux-rec" target="_blank">Igloo Magazine (EN) - 2013</a><br>
+
+
+                </div>
+                <div id="soundtracks" class="menuDiv">
+                    <h1>Soundtracks</h1>
+                    <p>Original Motion Picture Score for "An Italian Garage" episode:</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5kq8VS9v8iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+                    <p>Original track for Lancia Rally 037</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vFffWC6Byuw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+                    <p>"Hesperius Draco's Requiem" featured in "Art & Mind" movie</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MK4QTBWsFkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+                    <p>Katie Gallagher's collection for New York fashion week</p>
+                    <a href="https://www.ghostcultmag.com/katie-gallagher-fashion-black-metal-interview/">ARTICLE</a><br><br>
+                    <p>Richard Lord's video for "Hesperius Draco" video</p>
+                    <iframe src="https://player.vimeo.com/video/330737557" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <p><a href="https://vimeo.com/330737557">Hesperius Draco</a> from <a href="https://vimeo.com/richardlord">Richard Lord</a> on <a href="https://vimeo.com">Vimeo</a>.</p><br>
+
+                </div>
+                <div id="contacts" class="menuDiv">
+                    <h1>Contacts</h1>
+                    <p>
+                        If you want to book me for a performance (Live or Dj Set) please do it through <a href="http://replicant.agency/" target="_blank">Replicant Booking Agency</a>.
+                        If you want to contact me for proposing a release, please take in consideration the following things before doing it:<br>
+                        1. I don't work for free<br>
+                        2. I don't have spare unreleased tracks to fill bazaar compilations<br><br>
+
+                        For other requests you can write me at hesperius.draco@theconventicle.club, otherwise find below the links to my main social/web profiles:
+                        <br><br>
+
+                        Soundcloud: <a href="https://soundcloud.com/alessandroparisi" target="_blank">https://soundcloud.com/alessandroparisi</a> <br>
+                        Instagram: <a href="https://www.instagram.com/hesperius_draco" target="_blank">https://www.instagram.com/hesperius_draco</a> <br>
+                        Youtube: <a href="https://www.youtube.com/user/PomodoroSpaziale" target="_blank">https://www.youtube.com/user/PomodoroSpaziale</a>
+                        <br><br>
+
+                    </p>
+                </div>
+                <div id="support" class="menuDiv">
+                    <h1>Support</h1>
+                    <p>
+                        If you want to support me you can buy my releases from here:<br>
+                        <a href="https://alessandroparisi.bandcamp.com/" target="_blank">https://alessandroparisi.bandcamp.com</a> <br>
+                        ...otherwise just send me a nice shout!
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
